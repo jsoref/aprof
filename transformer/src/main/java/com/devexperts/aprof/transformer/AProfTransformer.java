@@ -159,6 +159,17 @@ public class AProfTransformer implements ClassFileTransformer {
 				return true;
 			}
 		}
+
+		String[] included = config.getIncludedClasses();
+		if (included.length > 1) {
+			for (String s : included) {
+				if (cname.equals(s)) {
+					return false;
+				}
+			}
+			return true;
+		}
+
 		return false;
 	}
 

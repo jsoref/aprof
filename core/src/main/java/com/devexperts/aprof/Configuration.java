@@ -105,6 +105,9 @@ public class Configuration {
 	@Description("Comma-separated list of classes that shall not be transformed.")
 	private String[] exclude = new String[0];
 
+	@Description("Comma-separated list of classes that shall be transformed.")
+	private String[] include = new String[0];
+
 	@Description("Comma-separated list of locations that shall include call signature.")
 	private String[] signature = new String[] { "java.lang.String.<init>" };
 
@@ -251,6 +254,10 @@ public class Configuration {
 
 	public String[] getExcludedClasses() {
 		return exclude;
+	}
+
+	public String[] getIncludedClasses() {
+		return include;
 	}
 
 	public boolean isSignatureLocation(CharSequence location) {
