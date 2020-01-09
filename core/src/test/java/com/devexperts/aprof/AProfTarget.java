@@ -53,6 +53,7 @@ public class AProfTarget {
         }
 	}
 
+	@SuppressWarnings("deprecation")
 	private static String[] createStrings() throws UnsupportedEncodingException {
 		return new String[] {
 			new String(),
