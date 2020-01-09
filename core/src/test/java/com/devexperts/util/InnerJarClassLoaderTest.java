@@ -32,7 +32,7 @@ import com.devexperts.aprof.util.InnerJarClassLoader;
  */
 public class InnerJarClassLoaderTest {
 	public static void main(String[] args) throws IOException {
-		InnerJarClassLoader loader = new InnerJarClassLoader(new File("aprof.jar").toURL());
+		InnerJarClassLoader loader = new InnerJarClassLoader(new File("aprof.jar").toURI().toURL());
 		System.out.println(loader.getResourceAsStream("details.config"));
 		System.out.println(loader.getResource("details.config"));
 	}
